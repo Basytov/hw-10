@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
+import styled from 'styled-components';
 import './App.css';
+import TodoProvider from './components/provider/TodoProvider';
+import TodoForm from './components/todo-form/TodoForm';
+import TodoList from './components/todo-list/TodoList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <StyledHeader>
+        <h1>Todo list Context API</h1>
+      </StyledHeader>
+
+      <TodoProvider>
+        <TodoForm />
+        <TodoList />
+      </TodoProvider>
+
+
+ 
     </div>
   );
 }
 
 export default App;
+
+const StyledHeader = styled.header`
+text-align: center;
+`

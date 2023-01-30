@@ -1,5 +1,11 @@
+*{
+  background-color: rgb(255, 249, 127);
+}
+
+
 .App {
   text-align: center;
+  justify-content: center;
 }
 
 .App-logo {
